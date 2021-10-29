@@ -1,0 +1,16 @@
+server:
+  port: 88
+spring:
+  application:
+    name: gulimall-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: query_baidu_route
+          uri: https://www.baidu.com
+          predicates:
+            - Query=url,baidu
+        - id: query_qq_route
+          uri: https://www.qq.com
+          predicates:
+            - Query=url,qq

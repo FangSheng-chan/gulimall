@@ -1,9 +1,12 @@
 spring:
+  application:
+    name: gulimall-product
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://192.168.20.37/gulimall_pms?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+#      url: jdbc:mysql://192.168.20.37/gulimall_pms?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+      url: jdbc:mysql://192.168.1.107/gulimall_pms?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
       username: root
       password: Hello.001
       initial-size: 10
@@ -40,3 +43,6 @@ mybatis-plus:
       id-type: auto
 server:
   port: 8000
+logging:
+  level:
+    com.ss.gulimall: debug

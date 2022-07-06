@@ -1,5 +1,5 @@
 server:
-  port: 88
+  port: 89
 spring:
   application:
     name: gulimall-gateway
@@ -14,3 +14,7 @@ spring:
           uri: https://www.qq.com
           predicates:
             - Query=url,qq
+        - id: ss_host_route
+          uri: lb://gulimall-product
+          predicates:
+            - Host=**.ss.org
